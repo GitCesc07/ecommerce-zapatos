@@ -1,0 +1,94 @@
+:root {
+    --fuentePrincipal: 'Rubik', sans-serif;
+    --fuenteSecundaria: 'Roboto Condensed',sans-serif;
+    --colorWhite: #fff;
+    --colorBlack: #000;
+    --colorOrange: #f77f00;
+    --colorCian: #0096c7;    
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* *Contendor principal */
+.contenedor {
+    margin: 0 auto;
+    max-width: 120rem;
+}
+
+.header-flex {
+    max-width: 60rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+}
+
+.header-flex .flex .p-logotipo:hover {
+    color: var(--colorCian);
+}
+
+.header-flex .flex .p-logotipo {
+    font-family: var(--fuentePrincipal);
+    color: var(--colorBlack);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex nav ul li a {
+    text-align: none;
+    text-decoration: none;
+    color: var(--colorBlack);
+    padding: 3px;
+    margin: 0 15px;
+    transition: .5s;
+    font-size: 1rem;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 700;
+}
+
+.flex ul {
+    display: flex;
+    list-style: none;
+}
+
+.flex nav ul li a:hover {
+    color: var(--colorCian);
+    transform: scaleX(1);
+}
+
+.nav-responsive {
+    padding: 5px 10px;
+    cursor: pointer;
+    display: none;
+}
+
+/* *Modificando tamaño del perfil*/
+.carrito-flex {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.person {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
