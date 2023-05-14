@@ -5,6 +5,7 @@
     --colorBlack: #000;
     --colorOrange: #f77f00;
     --colorCian: #0096c7;    
+    --colorBgCarrito: #edede9;
 }
 
 
@@ -85,6 +86,27 @@ html {
     display: flex;
     align-items: center;
     column-gap: 2rem;
+}
+.carrito-compra ul {
+    list-style: none;
+}
+
+.submenu #carrito {
+    display: none;
+}
+.submenu {
+    position: relative;
+}
+.submenu:hover #carrito {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: var(--colorBgCarrito);
+    padding: 2rem;
+    min-height: 40rem;
+    min-width: 50rem;
 }
 
 .person {
