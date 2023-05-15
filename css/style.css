@@ -168,7 +168,6 @@ td {
     text-transform: uppercase;
     color: var(--colorOcuro);
 }
-
 .submenu #carrito {
     display: none;
 }
@@ -178,9 +177,9 @@ td {
 }
 
 /* *Creando espacio donde se mostraran los articulos que esten en el carrito */
-.submenu:hover #carrito {
+.submenu #carrito {
     display: block;
-    position: absolute;
+    position: absolute;   
     right: 0;
     top: 100%;
     z-index: 1;
@@ -198,20 +197,20 @@ td {
 }
 
 @media (min-width: 380px) { 
-    .submenu:hover #carrito {
+    .submenu #carrito {
         min-width: 20rem;
     }
 }
 
 @media (min-width: 468px) { 
-    .submenu:hover #carrito {
+    .submenu #carrito {
         min-width: 25rem;
     }
 }
 
 
 @media (min-width: 574px) {
-    .submenu:hover #carrito {
+    .submenu #carrito {
         min-width: 29rem;
     }
 }
@@ -224,13 +223,13 @@ td {
 }
 
 @media (min-width: 660px) {
-    .submenu:hover #carrito {
+    .submenu #carrito {
         min-width: 32rem;
     }
 }
 
 @media (min-width: 768px) { 
-    .submenu:hover #carrito {
+    .submenu:active #carrito {
         min-width: 38rem;
     }
 }
