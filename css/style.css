@@ -198,8 +198,8 @@ td:last-child {
 }
 
 .zapatos-principal,.zapatos-secund {
-    height: 28rem;
-    width: 28rem;
+    height: 22rem;
+    width: 22rem;
     border-radius: 1rem;
 }
 
@@ -215,7 +215,7 @@ td:last-child {
 }
 
 .descripcion {
-    margin-left: 4rem;
+    /* margin-left: 2rem; */
     padding: 1rem;
     font-weight: 700;
 }
@@ -264,7 +264,7 @@ td:last-child {
     align-items: center;    
 }
 .flex-botones .flex-btn {
-    margin-right: 4rem;
+    margin-right: 2rem;
 }
 
 .flex-btn {
@@ -285,7 +285,14 @@ td:last-child {
 }
 
 .btn-carrito {
+    display: flex;
+    align-items: center;
     background-color: var(--colorOrange);
     text-decoration: none;
-
+    padding: .5rem 2rem;
+    color: var(--colorWhite);   
+    border-radius: 8px; 
+}
+.icon-add {
+    margin-right: .6rem;
 }
