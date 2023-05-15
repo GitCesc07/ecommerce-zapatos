@@ -188,12 +188,71 @@ td {
     border-radius: 1rem;
     padding: 2rem;
     min-height: 26rem;
-    min-width: 38rem;
+    min-width: 18rem;
 }
+
 
 .spacin-full {
     width: 100%;
     box-sizing: border-box;
+}
+
+@media (min-width: 380px) { 
+    .submenu:hover #carrito {
+        min-width: 20rem;
+    }
+}
+
+@media (min-width: 468px) { 
+    .submenu:hover #carrito {
+        min-width: 25rem;
+    }
+}
+
+
+@media (min-width: 574px) {
+    .submenu:hover #carrito {
+        min-width: 29rem;
+    }
+}
+
+@media (max-width: 660px) { 
+    .submenu #carrito tr th {
+        display: block;
+        text-align: start;
+    }
+}
+
+@media (min-width: 660px) {
+    .submenu:hover #carrito {
+        min-width: 32rem;
+    }
+}
+
+@media (min-width: 768px) { 
+    .submenu:hover #carrito {
+        min-width: 38rem;
+    }
+}
+
+@media (min-width: 968px) { 
+    .submenu:hover #carrito {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        z-index: 1;
+        background-color: var(--colorBgCarrito);
+        border-radius: 1rem;
+        padding: 2rem;
+        min-height: 26rem;
+        min-width: 38rem;
+    }
+    
+    .spacin-full {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 #carrito .btn-apecing {
@@ -214,15 +273,22 @@ td {
     text-transform: uppercase;
 }
 
-th:first-child,
-td:first-child {
-    padding-left: 0;
+@media (max-width: 468px) { 
+     th, td {
+        padding-left: 0;
+     }
 }
 
-th:last-child,
-td:last-child {
-    padding-right: 0;
-    text-align: center;
+@media (min-width: 768px) { 
+    th:first-child,
+    td:first-child {
+        padding-left: 0;
+    }
+        th:last-child,
+        td:last-child {
+            padding-right: 0;
+            text-align: center;
+        }
 }
 
 .icon-delete {
