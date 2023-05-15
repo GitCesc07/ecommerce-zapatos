@@ -7,12 +7,18 @@
     --colorCian: #0096c7;    
     --colorBtn: #ade8f4;
     --colorBgCarrito: #edede9;
+    --colorOcuro: #073b4c;
+    --colorRed: #ec050d;
+    --colorBgCard: #ffb4a2;
 }
 
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
+}
+body {
+    font-family: var(--fuenteSecundaria);
 }
 
 *,
@@ -33,7 +39,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 2.5rem;
+    margin-top: 2.5rem;    
 }
 
 .header-flex .flex .p-logotipo:hover {
@@ -82,6 +88,13 @@ html {
     display: none;
 }
 
+.border {
+    max-width: 60rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid var(--colorOcuro);
+}
+
 /* *Modificando tamaño del perfil*/
 .carrito-flex {
     display: flex;
@@ -99,6 +112,7 @@ td {
     border-bottom: 1px solid var(--colorBlack);
     font-family: var(--fuenteSecundaria);
     text-transform: uppercase;
+    color: var(--colorOcuro);
 }
 
 .submenu #carrito {
@@ -141,9 +155,19 @@ td {
     font-size: 1rem;
     font-family: var(--fuenteSecundaria);
     background-color: var(--colorBtn);
-    color: var(--colorBlack);
+    color: var(--colorRed);
     text-transform: uppercase;
 }
+th:first-child,
+td:first-child {
+    padding-left: 0;
+}
+th:last-child,
+td:last-child {
+    padding-right: 0;
+    text-align: center;
+}
+
 .icon-delete {
     margin-right: 1rem;
 }
@@ -152,4 +176,116 @@ td {
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+}
+
+/* *Contenido principal */
+.contenedor-principal {
+    margin: 0 auto;
+    max-width: 55rem;
+    margin-top: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    align-items: center;
+}
+
+.grid .descripcion {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.zapatos-principal,.zapatos-secund {
+    height: 28rem;
+    width: 28rem;
+    border-radius: 1rem;
+}
+
+.zapatos-secund {
+    height: 5rem;
+    width: 5rem;
+}
+
+.zaptos-flex {
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.descripcion {
+    margin-left: 4rem;
+    padding: 1rem;
+    font-weight: 700;
+}
+.p-compa {
+    color: var(--colorOrange);    
+    font-size: 1rem;
+}
+.p-title {
+    font-size: 2rem;    
+    margin: 1rem 0;
+}
+.p-marca {
+    margin: 0;
+}
+.p-desc {
+    font-weight: 400;
+    margin: 0;
+}
+.card-flex {
+    display: flex;
+    align-items: center;
+}
+.price {
+    font-size: 1.5rem;
+    margin: .5rem 0;
+}
+.card {
+    background-color: var(--colorBgCard);
+    padding: .2rem .6rem;
+    margin: 0 0 0 1rem;
+    border-radius: 5px;
+    color: var(--colorRed);
+}
+
+.price-desc {
+    margin: 0;
+    text-decoration: line-through;
+}
+
+.flex-botones, .flex-btn {
+    display: flex;
+}
+
+.flex-botones {
+    margin-top: 2rem;
+    align-items: center;    
+}
+.flex-botones .flex-btn {
+    margin-right: 4rem;
+}
+
+.flex-btn {
+    background-color: var(--colorBgCarrito);
+    /* padding: .2rem .8rem;     */
+    align-items: center;
+}
+
+.btn-add, .btn-res {
+    border: 1px solid var(--colorOcuro);
+    border-radius: 5px;
+}
+.btn-add {
+    margin-right: 1rem;    
+}
+.btn-res {
+    margin-left: 1rem;
+}
+
+.btn-carrito {
+    background-color: var(--colorOrange);
+    text-decoration: none;
+
 }
