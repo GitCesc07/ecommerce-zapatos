@@ -1,10 +1,10 @@
 :root {
     --fuentePrincipal: 'Rubik', sans-serif;
-    --fuenteSecundaria: 'Roboto Condensed',sans-serif;
+    --fuenteSecundaria: 'Roboto Condensed', sans-serif;
     --colorWhite: #fff;
     --colorBlack: #000;
     --colorOrange: #f77f00;
-    --colorCian: #0096c7;    
+    --colorCian: #0096c7;
     --colorBtn: #ade8f4;
     --colorBgCarrito: #edede9;
     --colorOcuro: #073b4c;
@@ -17,6 +17,7 @@
 html {
     box-sizing: border-box;
 }
+
 body {
     font-family: var(--fuenteSecundaria);
 }
@@ -34,13 +35,17 @@ body {
 }
 
 .header-flex {
-    max-width: 60rem;
-    margin: auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-top: 2.5rem;    
 }
+
+ .header-flex {
+     max-width: 60rem;
+     margin: auto;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 2.5rem;
+ }
 
 .header-flex .flex .p-logotipo:hover {
     color: var(--colorCian);
@@ -58,6 +63,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+@media (min-width: 968px) { 
+     .flex {
+        flex-direction: row;
+     }
 }
 
 .flex nav ul li a {
@@ -82,11 +94,45 @@ body {
     transform: scaleX(1);
 }
 
-.nav-responsive {
-    padding: 5px 10px;
-    cursor: pointer;
-    display: none;
+@media screen and (max-width: 968px) {
+    nav {
+        display: none;
+    }
+
+    .flex .nav-responsive {
+        display: block;
+    }
+
+    .nav-responsive {
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: var(--colorBgCarrito);
+        width: 18rem;
+    }
+
+    nav.responsive ul {
+        display: block !important;
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
 }
+
+
+
+/* @media screen and (max-width: 968px) {
+    .nav-responsive {
+        display: block;
+    }
+} */
 
 .border {
     max-width: 60rem;
@@ -101,6 +147,7 @@ body {
     align-items: center;
     column-gap: 1rem;
 }
+
 .carrito-compra ul {
     list-style: none;
 }
@@ -118,6 +165,7 @@ td {
 .submenu #carrito {
     display: none;
 }
+
 .submenu {
     position: relative;
 }
@@ -158,10 +206,12 @@ td {
     color: var(--colorRed);
     text-transform: uppercase;
 }
+
 th:first-child,
 td:first-child {
     padding-left: 0;
 }
+
 th:last-child,
 td:last-child {
     padding-right: 0;
@@ -197,7 +247,8 @@ td:last-child {
     grid-row: 1 / 2;
 }
 
-.zapatos-principal,.zapatos-secund {
+.zapatos-principal,
+.zapatos-secund {
     height: 22rem;
     width: 22rem;
     border-radius: 1rem;
@@ -219,29 +270,36 @@ td:last-child {
     padding: 1rem;
     font-weight: 700;
 }
+
 .p-compa {
-    color: var(--colorOrange);    
+    color: var(--colorOrange);
     font-size: 1rem;
 }
+
 .p-title {
-    font-size: 2rem;    
+    font-size: 2rem;
     margin: 1rem 0;
 }
+
 .p-marca {
     margin: 0;
 }
+
 .p-desc {
     font-weight: 400;
     margin: 0;
 }
+
 .card-flex {
     display: flex;
     align-items: center;
 }
+
 .price {
     font-size: 1.5rem;
     margin: .5rem 0;
 }
+
 .card {
     background-color: var(--colorBgCard);
     padding: .2rem .6rem;
@@ -255,14 +313,16 @@ td:last-child {
     text-decoration: line-through;
 }
 
-.flex-botones, .flex-btn {
+.flex-botones,
+.flex-btn {
     display: flex;
 }
 
 .flex-botones {
     margin-top: 2rem;
-    align-items: center;    
+    align-items: center;
 }
+
 .flex-botones .flex-btn {
     margin-right: 2rem;
 }
@@ -273,13 +333,16 @@ td:last-child {
     align-items: center;
 }
 
-.btn-add, .btn-res {
+.btn-add,
+.btn-res {
     border: 1px solid var(--colorOcuro);
     border-radius: 5px;
 }
+
 .btn-add {
-    margin-right: 1rem;    
+    margin-right: 1rem;
 }
+
 .btn-res {
     margin-left: 1rem;
 }
@@ -290,9 +353,10 @@ td:last-child {
     background-color: var(--colorOrange);
     text-decoration: none;
     padding: .5rem 2rem;
-    color: var(--colorWhite);   
-    border-radius: 8px; 
+    color: var(--colorWhite);
+    border-radius: 8px;
 }
+
 .icon-add {
     margin-right: .6rem;
 }
