@@ -56,7 +56,13 @@ body {
     color: var(--colorBlack);
     text-decoration: none;
     font-weight: 700;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
+}
+
+@media (min-width: 768px) { 
+    .header-flex .flex .p-logotipo {        
+        font-size: 1.8rem;
+    }
 }
 
 .flex {
@@ -94,6 +100,12 @@ body {
     transform: scaleX(1);
 }
 
+@media (min-width: 968px) { 
+    .flex .nav-responsive {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 968px) {
     nav {
         display: none;
@@ -111,28 +123,23 @@ body {
     nav.responsive {
         display: block;
         position: absolute;
-        right: 0;
+        margin-left: 1rem;
         top: 75px;
         background-color: var(--colorBgCarrito);
         width: 18rem;
+        border-radius: 8px;
+        margin-top: 1rem;
     }
 
     nav.responsive ul {
         display: block !important;
     }
     nav.responsive ul li {
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid var(--colorBlack);
         padding: 10px 0;
     }
 }
 
-
-
-/* @media screen and (max-width: 968px) {
-    .nav-responsive {
-        display: block;
-    }
-} */
 
 .border {
     max-width: 60rem;
