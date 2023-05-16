@@ -168,7 +168,7 @@ td {
     text-transform: uppercase;
     color: var(--colorOcuro);
 }
-.submenu #carrito {
+.submenu .ocultar-carrito #carrito {
     display: none;
 }
 
@@ -188,6 +188,7 @@ td {
     padding: 2rem;
     min-height: 26rem;
     min-width: 18rem;
+    margin-right: -1.5rem;
 }
 
 
@@ -229,13 +230,13 @@ td {
 }
 
 @media (min-width: 768px) { 
-    .submenu:active #carrito {
+    .submenu #carrito {
         min-width: 38rem;
     }
 }
 
 @media (min-width: 968px) { 
-    .submenu:hover #carrito {
+    .submenu #carrito {
         display: block;
         position: absolute;
         right: 0;
